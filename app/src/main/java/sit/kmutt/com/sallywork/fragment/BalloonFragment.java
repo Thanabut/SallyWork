@@ -36,12 +36,15 @@ public class BalloonFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btn_balloon:
-                balloonClick();
+                balloonClick(v);
                 break;
         }
     }
 
-    private void balloonClick(){
+    private void balloonClick(View v){
+        if(v instanceof BalloonButton){
+            ((BalloonButton)v).setState((int)(Math.random()*4));
+        }
         if(infoGroup.getVisibility() == View.INVISIBLE){
             infoGroup.setVisibility(View.VISIBLE);
         }
