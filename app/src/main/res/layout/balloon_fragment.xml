@@ -14,7 +14,9 @@
         android:orientation="vertical"
         android:id="@+id/hostInfo"
         android:layout_toRightOf="@id/btn_balloon"
+        android:layout_marginLeft="5dp"
         android:padding="5dp"
+        android:background="@android:color/white"
         android:visibility="invisible">
         <TextView
             android:layout_height="wrap_content"
